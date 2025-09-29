@@ -1,3 +1,5 @@
 Enzo Natali,a tourné 1 h à chercher pourquoi sa page était vide : il avait créé lib/wiews au lieu de lib/views.
 Florian Astier,a versionné son dossier tmp sur Git et maintenant on fait tous des merges sur des fichiers jetables.
-Test,a modifier
+Enzo Natali,a tourné 1 h à chercher pourquoi sa page était vide : il avait créé app/wiews au lieu de app/views.
+Lucas Miranda,a oublié un end dans une boucle Ruby et a inventé le concept de fonction infinie.
+Johanna Delfieux,a prononcé 'puts' comme 'putz' pendant tout un meetup et personne n’a osé corriger.
