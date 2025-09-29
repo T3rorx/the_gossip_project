@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Crée un potin !</title>
+    <title>Modifier le potin n°<%= params['id']%> !</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
   <body class="text-center">
     <div class="d-flex flex-column align-items-center gap-3 py-5">
-      <h1 class="display-6 fw-bold card bg-body-tertiary shadow-sm rounded-3 p-4 w-100" style="max-width: 480px;">Crée un potin !</h1>
+      <h1 class="display-6 fw-bold card bg-body-tertiary shadow-sm rounded-3 p-4 w-100" style="max-width: 480px;">Modifier le potin n°<%= params['id']%> !</h1>
       <div class="card bg-body-tertiary shadow-sm rounded-3 p-4 w-100" style="max-width: 480px;">
-        <p class="mb-4">Balance ton potin via le formulaire ci-dessous</p>
-        <form action='/gossips/new/' method='POST' class="d-flex flex-column gap-3 text-start">
+        <p class="mb-4">Modifie le potin via le formulaire ci-dessous</p>
+        <form action='/gossips/<%= params['id']%>/edit' method='POST' class="d-flex flex-column gap-3 text-start">
           <div>
             <label class="form-label" for='gossip_author'>Saisi ici ton nom</label>
             <input class="form-control" type='text' name='gossip_author' id='gossip_author'/>
           </div>
           <div>
-            <label class="form-label" for='gossip_content'>Balance ton potin</label>
+            <label class="form-label" for='gossip_content'>Potin modifié</label>
             <textarea class="form-control" name='gossip_content' id='gossip_content' rows="3"></textarea>
           </div>
-          <button class="btn btn-light align-self-end" type='submit'>Envoyer</button>
+          <input class="btn btn-light align-self-end" value="Envoyer" type='submit'/>
         </form>
       </div>
     </div>
