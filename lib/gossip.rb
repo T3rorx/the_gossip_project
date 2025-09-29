@@ -31,12 +31,13 @@ class Gossip
     return gossipx
   end
   def self.update(id, author_update, content_update)
-    gossip_update = @@all_gossips[id]
+    all_gossips = []
+    gossip_update = all_gossips[id]
     gossip_update.author = author_update
     gossip_update.content = content_update
     CSV.open("./db/gossip.csv", "wb") do |csv| 
-      @@all_gossips.each do |gossip|     # Écrire chaque potin
-        csv << [gossip.author, gossip.content, gossip.comments.join("|")]
+      all_gossips.each do |gossip|     # Écrire chaque potin
+        csv << [gossip.author, gossip.content]
       end
     end
   end
